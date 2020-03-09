@@ -27,7 +27,7 @@ const app = express();
 app.use(
   cors({
     credentials: true,
-    origin: ["http://localhost:3000", "https://distracted-noyce-fee0e2.netlify.com"] //Swap this with the client url 
+    origin: ["http://localhost:3000", "https://hardcore-elion-a07a34.netlify.com"] //Swap this with the client url 
   })
 );
 
@@ -68,7 +68,7 @@ app.use('/', auth);
 
 // Uncomment this line for production
 let client = path.join(__dirname + '../public/index.html')
-console.log('client',client)
+console.log('client', client)
 //app.get('*', (req, res) => res.sendFile(client));
 // For any other routes, redirect to the index.html file of React
 // app.get('*', (req, res) => {
