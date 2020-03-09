@@ -8,6 +8,7 @@ process.env.NODE_ENV === 'production'
 
 const service = axios.create({ withCredentials: true, baseURL });
 
+
 const actions = {
   isLoggedIn: async () => {
     return await service.get('/is-logged-in')
