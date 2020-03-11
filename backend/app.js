@@ -11,7 +11,7 @@ const session = require('express-session');
 const passport = require('./config/passport');
 
 
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/ironplate'
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb+srv://josephvisaac:The4horsemen123@cluster0-hyc4o.mongodb.net/test?retryWrites=true&w=majority'
 console.log('Connecting DB to ', MONGODB_URI)
 
 mongoose
@@ -63,8 +63,10 @@ app.use(logger('dev'));
 
 const index = require('./routes/index');
 const auth = require('./routes/auth');
+const theolo = require('./routes/theologians.data');
 app.use('/', index);
 app.use('/', auth);
+app.use('/', theolo)
 
 // Uncomment this line for production
 let client = path.join(__dirname + '../public/index.html')

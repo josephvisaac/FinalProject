@@ -7,6 +7,8 @@ import LogIn from './components/auth/LogIn';
 import Profile from './components/profile/Profile'
 import actions from './services/index'
 import './index.css'
+
+import { DispTheo } from './components/home/DispTheo';
 class App extends Component {
   
   state = { }
@@ -36,11 +38,13 @@ class App extends Component {
 
         
         <NavLink  class="nav-item active nav-link" to="/">Home</NavLink>
+        <NavLink  class="nav-item active nav-link" to="/DispTheo"> Theologians</NavLink>
+
         </ul>
   
         {this.state.email ? 
           <Fragment>
-            <span className = 'white'>Welcome  {this.state.email}!!</span>
+            <span className = 'white'>Welcome  {this.state.email}!</span>
           <NavLink onClick={this.logOut} to='/'>Log Out</NavLink>
            <NavLink to="/profile">Profile</NavLink>
            </Fragment>
@@ -124,6 +128,8 @@ class App extends Component {
         <Route exact path="/sign-up" render={(props)=><SignUp {...props} setUser={this.setUser} />} />
         <Route exact path="/log-in" render={(props) => <LogIn {...props} setUser={this.setUser}/>} />
         <Route exact path="/profile" render={(props) => <Profile {...props} user={this.state}/>} />
+      
+        <Route exact path="/DispTheo" render={(props) => <DispTheo {...props} user={this.state}/>} />
         
         <Route component={NotFound} />
       </Switch>

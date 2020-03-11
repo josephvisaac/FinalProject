@@ -10,6 +10,7 @@ const service = axios.create({ withCredentials: true, baseURL });
 
 
 const actions = {
+
   isLoggedIn: async () => {
     return await service.get('/is-logged-in')
   },
@@ -21,6 +22,9 @@ const actions = {
   },
   logOut: async () => {
     return await service.get('/logout')
+  },
+  allTheologians: async () => {
+    return await service.get('/theologians')
   }
 };
 
