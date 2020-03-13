@@ -127,9 +127,9 @@ class App extends Component {
         <Route exact path="/" render={(props) => <Home {...props} />} />
         <Route exact path="/sign-up" render={(props)=><SignUp {...props} setUser={this.setUser} />} />
         <Route exact path="/log-in" render={(props) => <LogIn {...props} setUser={this.setUser}/>} />
-        <Route exact path="/profile" render={(props) => <Profile {...props} user={this.state}/>} />
+        <Route exact path="/profile" render={(props) => <Profile {...props} setUser={this.setUser} user={this.state}/>} />
       
-        <Route exact path="/DispTheo" render={(props) => <DispTheo {...props} user={this.state}/>} />
+        <Route exact path="/disptheo" render={(props) => <DispTheo {...props} setUser={this.setUser} user={this.state}/>} />
         
         <Route component={NotFound} />
       </Switch>

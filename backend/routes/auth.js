@@ -5,20 +5,19 @@ const passport = require('../config/passport');
 
 router.post('/signup', (req, res, next) => {
   User.register(req.body, req.body.password)
-    .then((user) => { 
-        req.login(user, function(err,result){
-          res.status(201).json(user)
-        })
+    .then((user) => {
+      req.login(user, function (err, result) {
+        res.status(201).json(user)
+      })
     })
-    .catch((err) => { 
+    .catch((err) => {
       console.log(err)
       res.status(500).json({ err })
     });
 });
 
-
 //return await service.get('/is-logged-in');
-router.get('/is-logged-in', (req, res, next) => {  
+router.get('/is-logged-in', (req, res, next) => {
   res.json(req.user)
 })
 

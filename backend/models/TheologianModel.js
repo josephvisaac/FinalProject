@@ -2,9 +2,9 @@ const { Schema, model } = require('mongoose');
 const TheologySchema = new Schema(
   {
     religion: String,
-    name: String,
+    tname: String,
     description: String,
-    years:String, //life birth/death
+    years:String, 
     img: String,
     books: Array
   }

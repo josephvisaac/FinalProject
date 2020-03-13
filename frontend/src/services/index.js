@@ -25,6 +25,9 @@ const actions = {
   },
   allTheologians: async () => {
     return await service.get('/theologians')
+  },
+  addFavTheo: async (object) => {
+    return await service.post('/disptheo', { object: object })
   }
 };
 

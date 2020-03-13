@@ -5,13 +5,15 @@ const userSchema = new Schema(
   {
     email: String,
     name: String,
-    booksFav:[],
-    theologiansFav:[]
+    
+    theologiansPicked: Array
+    
   },
   {
     timestamps: true,
     versionKey: false
   },
+  
 
 );
 
