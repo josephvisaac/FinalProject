@@ -27,7 +27,7 @@ const app = express();
 app.use(
   cors({
     credentials: true,
-    origin: ["http://localhost:3000", "https://hardcore-elion-a07a34.netlify.com"] //Swap this with the client url 
+    origin: ["http://localhost:3000", "https://hardcore-elion-a07a34.netlify.com", 'https://apostolictheology.netlify.com/'] //Swap this with the client url 
   })
 );
 

@@ -37,6 +37,7 @@
     border-radius: 50%;
     
     outline:none;
+    
 }
 
 .inline{
@@ -49,3 +50,25 @@
 button:focus {
     outline: none;
   }
+ 
+  #list-theo{
+      
+  }
+  #inputsearch{
+      
+      padding-left: 8px;
+      border-color: coral;
+      border-width: 4px;
+      border-radius: 3rem;
+      margin-top: 3px;
+      margin-bottom: 3px;
+      margin-left: 3px;
+  }
+  #inputsearch:focus{
+      outline: none;
+  }
+
+
+  body:-webkit-scrollbar{
+    display: none !important;
+}

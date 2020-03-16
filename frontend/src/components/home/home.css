@@ -1,3 +1,23 @@
 /* body{
     background-color: blue;
 } */
+#home-title{
+    text-align: center;
+}
+/* #home-img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+#a{
+    width: 545px;
+    height: 201px;
+} */
+
+.pictures-home{
+    margin-left: auto;
+  margin-right: auto;
+    width: 100%;
+    height: 100%;
+}
