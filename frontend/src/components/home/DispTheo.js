@@ -39,7 +39,7 @@ export class DispTheo extends Component {
         )
 
         // <h4 className='title'> Works: </h4> {theologian.books}
-        console.log(this.props.user.theologiansPicked, this.state.allTheologians)
+        // console.log(this.props.user.theologiansPicked, this.state.allTheologians)
         return (
             <div >
                 <input placeholder='name of theologian'

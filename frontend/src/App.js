@@ -37,8 +37,8 @@ class App extends Component {
       <ul class="navbar-nav mr-auto">
 
         
-        <NavLink  class="nav-item active nav-link" to="/">Home</NavLink>
-        <NavLink  class="nav-item active nav-link" to="/DispTheo"> Theologians</NavLink>
+        <NavLink  class="nav-item active " to="/">Home</NavLink>
+        <NavLink  class="nav-item active " to="/DispTheo"> Theologians</NavLink>
 
         </ul>
   
@@ -54,8 +54,8 @@ class App extends Component {
            <ul class="navbar-nav mr-auto ">
 
            <Fragment>
-            <NavLink class="nav-item active nav-link " to="/sign-up">Register</NavLink>
-            <NavLink class="nav-item active nav-link" to="/log-in"> Log In</NavLink>
+            <NavLink class="nav-item active  " to="/sign-up">Register</NavLink>
+            <NavLink class="nav-item active " to="/log-in"> Log In</NavLink>
            </Fragment>
             </ul>
           </div>

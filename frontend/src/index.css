@@ -12,6 +12,13 @@ a:hover{
 
 
 }
+/* html{
+  overflow: scroll;
+overflow-x: hidden;
+} */
+body::-webkit-scrollbar{
+  display: none !important;
+}
 .white{
   color: white;
 }

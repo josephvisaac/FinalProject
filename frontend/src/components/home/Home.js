@@ -9,7 +9,7 @@ class Home extends Component {
   render() {
     return (
       <div>
-        <h1 id = 'home-title'>Historic Christianity</h1>
+        {/* <h1 id = 'home-title'>Historic Christianity</h1> */}
        
         <img className = 'pictures-home' src = 'https://www.crossroadsinitiative.com/wp-content/uploads/2016/02/reading-the-Early-Church-Fathers.jpg' />
       </div>

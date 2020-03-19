@@ -68,7 +68,3 @@ button:focus {
       outline: none;
   }
 
-
-  body:-webkit-scrollbar{
-    display: none !important;
-}
