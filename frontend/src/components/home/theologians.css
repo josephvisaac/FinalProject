@@ -1,10 +1,16 @@
 .theologians{
     float: left;
-    width: 33.33%;
-    height: 700px;
+    width: 28rem;
+    height: 300px;
+    height: fit-content;
     border-style: solid ;
-    border-width: 1px;
-    border-color: coral;
+    border-width: 0px;
+ 
+    background-image:linear-gradient(black, black);
+    background-position:top center;
+    background-size:80% 2px;
+    background-repeat: no-repeat;
+   
     padding: 5px;
     
     overflow: hidden;
@@ -52,7 +58,8 @@ button:focus {
   }
  
   #list-theo{
-      
+      background-image: url('https://image.shutterstock.com/image-photo/art-concrete-texture-background-black-260nw-469253030.jpg');
+    text-align: center;
   }
   #inputsearch{
       

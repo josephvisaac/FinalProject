@@ -26,7 +26,7 @@ export class DispTheo extends Component {
 
 
 
-
+// fix me
     async theologianLogger(object) {//to post it to the profile
         let user = await actions.addFavTheo(object);
         this.props.setUser(user.data);
@@ -49,14 +49,15 @@ export class DispTheo extends Component {
                 />
                 <div id='list-theo'>
                     {filteredList.map(theologian => {
-
+                        let names = theologian.tname
+                         names = names.substring(0,21)
                         let works = <> <h4 className='title'> Works: </h4> {theologian.books} </>
                         return (<div className='theologians' >
                             <p className='description'>
                                 <img className='pics' src={theologian.img} />
                                 <div className='margins'>
                                     <div className='wrapper-title'>
-                                        <h3 className='title inline'>{theologian.tname}</h3>
+                                        <h3 className='title inline'>{names}</h3>
                                         {this.props.user.email && (
 
                                             this.props.user.theologiansPicked.filter(theo => theologian._id === theo._id)[0] ?
@@ -73,8 +74,8 @@ export class DispTheo extends Component {
                                     </div>
 
                                     <h4 className='title'>{theologian.years}</h4>
-                                    {theologian.description}
-                                    {works}
+                                    {/* {theologian.description} */}
+                                    {/* {works} */}
 
                                 </div>
                             </p>
