@@ -5,8 +5,10 @@ import '../home/theologians.css'
 
 export class Profile extends React.Component {
     state = {
+        showMe: false,
         // theologians: [...this.props.user.theologiansPicked],
         search: '',
+
         // allTheologians: [...this.props.user.theologiansPicked]
     }
 
@@ -23,11 +25,22 @@ export class Profile extends React.Component {
         this.setState({ search: event.target.value })
     }
 
+    showDescription = (e, list, func) => {
 
+        this.setState({ showMe: !this.state.showMe })
+        console.log(e)
+        console.log(list)
+        let chosenDescription = list.filter(name => name._id == e)[0].description
+        console.log(chosenDescription)
+
+
+    }
 
 
     render() {
-        // console.log(this.props.user.theologiansPicked)
+
+
+
 
 
         if (!this.props.user.email) {
@@ -41,7 +54,7 @@ export class Profile extends React.Component {
             )
 
             return (
-                <React.Fragment>
+                <React.Fragment className = 'background-whole'>
                     <div>
                         <input placeholder='name of theologian'
                             id='inputsearch' type="text" name="theologian"
@@ -53,8 +66,9 @@ export class Profile extends React.Component {
 
                             {filteredList.map(theologian => {
 
+
                                 let works = <> <h4 className='title'> Works: </h4> {theologian.books} </>
-                                return (<div className='theologians' >
+                                return (<div key={theologian._id} className='theologians pro-height' >
                                     <p className='description'>
 
                                         <img className='pics' src={theologian.img} />
@@ -74,10 +88,33 @@ export class Profile extends React.Component {
                                             </div>
 
                                             <h4 className='title'>{theologian.years}</h4>
-                                            {theologian.description}
-                                            {works}
+
+                                            {/* <button onClick= {() => this.showDescription(theologian._id, filteredList)} >show/Hide</button> */}
+                                            <div class="dropdown">
+                                                <span>Description</span>
+                                                <div class="dropdown-content">
+                                                    <p>{theologian.description}</p>
+                                                </div>
+                                            </div>
+                                            <br />
+                                            
+                                            <div class="dropdown">
+                                                <span>works</span>
+                                                <div class="dropdown-content">
+                                                    <ul>
+                                                        {theologian.books.map(book => {
+                                                            return <li className = 'booklist'>{book}</li>
+                                                        })}
+                                    
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+
+
                                         </div>
                                     </p>
+
                                 </div>
 
 
