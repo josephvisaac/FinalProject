@@ -11,7 +11,7 @@ import './index.css'
 import { DispTheo } from './components/home/DispTheo';
 class App extends Component {
   
-  // state = { }
+  state = { }
   
   async componentDidMount() {
     let user = await actions.isLoggedIn()
