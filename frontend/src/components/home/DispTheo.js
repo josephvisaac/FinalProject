@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import actions from '../../services/index'
 import './theologians.css'
-
 export class DispTheo extends Component {
     state = {
         allTheologians: [],
@@ -70,6 +69,8 @@ export class DispTheo extends Component {
                                                     class="add-button inline"
                                                     onClick={() => this.theologianLogger(theologian)}
                                                 >add</button>)}
+
+
 
                                     </div>
 

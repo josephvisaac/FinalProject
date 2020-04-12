@@ -23,3 +23,6 @@ body::-webkit-scrollbar{
   color: white;
 }
 
+.barflex{
+  display: flex !important;
+}

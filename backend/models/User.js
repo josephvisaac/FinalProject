@@ -6,7 +6,8 @@ const userSchema = new Schema(
     email: String,
     name: String,
     
-    theologiansPicked: Array
+    theologiansPicked: Array,
+    favoriteBooks:Array
     
   },
   {

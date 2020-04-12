@@ -29,6 +29,7 @@ const actions = {
   addFavTheo: async (object) => {
     return await service.post('/disptheo', { object: object })
   }
+  
 };
 
 export default actions;

@@ -25,16 +25,16 @@ export class Profile extends React.Component {
         this.setState({ search: event.target.value })
     }
 
-    showDescription = (e, list, func) => {
+    // showDescription = (e, list, func) => {
 
-        this.setState({ showMe: !this.state.showMe })
-        console.log(e)
-        console.log(list)
-        let chosenDescription = list.filter(name => name._id == e)[0].description
-        console.log(chosenDescription)
+    //     this.setState({ showMe: !this.state.showMe })
+    //     console.log(e)
+    //     console.log(list)
+    //     let chosenDescription = list.filter(name => name._id == e)[0].description
+    //     console.log(chosenDescription)
 
 
-    }
+    // }
 
 
     render() {

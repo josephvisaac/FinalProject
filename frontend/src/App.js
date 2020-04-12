@@ -11,7 +11,7 @@ import './index.css'
 import { DispTheo } from './components/home/DispTheo';
 class App extends Component {
   
-  state = { }
+  // state = { }
   
   async componentDidMount() {
     let user = await actions.isLoggedIn()
@@ -33,7 +33,7 @@ class App extends Component {
     <BrowserRouter>
      
 
-      <nav className="navbar navbar-expand navbar-dark bg-dark">
+      <nav className="navbar navbar-expand navbar-dark bg-dark barflex">
       <ul class="navbar-nav mr-auto">
 
         

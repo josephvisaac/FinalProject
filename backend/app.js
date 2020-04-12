@@ -65,10 +65,12 @@ const index = require('./routes/index');
 const auth = require('./routes/auth');
 const theolo = require('./routes/theologians.data');
 const disptheo = require('./routes/user.routes')
+const favBooks = require('./routes/user.routes.books')
 app.use('/', index);
 app.use('/', auth);
 app.use('/', theolo)
 app.use('/', disptheo)
+app.use('/', favBooks)
 
 // Uncomment this line for production
 let client = path.join(__dirname + '../public/index.html')
